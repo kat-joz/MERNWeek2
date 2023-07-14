@@ -4,7 +4,6 @@ import os from 'os';
 /*
 process.stdout.write('Hello World!');
 process.stdout.clearLine(0);
-process.stdout.cursorTo(0);
 process.stdout.write('new message');
 console.log(os.totalmem());
 console.log(os.freemem());

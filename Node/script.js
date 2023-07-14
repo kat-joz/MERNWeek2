@@ -36,10 +36,14 @@ let read =URL=> {
 
 // GET method for READ
 let read =URL=> {
+    let image = document.createElement("img");
+
     axios
         .get(URL)
         .then( (response) => {
-            output.innerText = JSON.stringify(response.data);
+        output.innerText = JSON.stringify(response.data);
+        image.src = response.data.url;
+        output.append(image);
         }).catch((error) => {
             console.error(error);
         });
@@ -59,4 +63,4 @@ let create =URL=> {
         });
 }
 
-button.onclick =()=> create(input.value);
+button.onclick =()=> read(input.value);
